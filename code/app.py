@@ -8,3 +8,6 @@ from qr_generator import generate_qr
 from database import create_table
 from database import save_qr
 from database import get_history
+
+# Create database table
+create_table()
