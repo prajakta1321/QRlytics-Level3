@@ -14,3 +14,6 @@ create_table()
 
 # Configure page
 st.set_page_config(page_title="SmartQR",page_icon="")
+
+# App title
+st.title("SmartQR - Level 3")
