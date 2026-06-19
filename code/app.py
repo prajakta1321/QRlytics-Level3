@@ -11,3 +11,6 @@ from database import get_history
 
 # Create database table
 create_table()
+
+# Configure page
+st.set_page_config(page_title="SmartQR",page_icon="")
