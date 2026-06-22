@@ -20,3 +20,6 @@ st.title("SmartQR - Level 3")
 
 # Description
 st.write("Generate customizable QR codes and maintain generation history.")
+
+# Input field
+data = st.text_input("Enter text or URL")
