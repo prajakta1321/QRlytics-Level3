@@ -17,3 +17,6 @@ st.set_page_config(page_title="SmartQR",page_icon="")
 
 # App title
 st.title("SmartQR - Level 3")
+
+# Description
+st.write("Generate customizable QR codes and maintain generation history.")
