@@ -31,3 +31,78 @@ back_color = st.color_picker("Choose background color", "#FFFFFF")
 
 # Generate button
 if st.button("Generate QR"):
+
+    # Check empty input
+    if not data.strip():
+
+        st.error("Input cannot be empty.")
+
+    else:
+
+        try:
+
+            # Generate QR
+            filename = generate_qr(
+                data,
+                fill_color=fill_color,
+                back_color=back_color
+            )
+
+            # Save details in database
+            save_qr(
+                data,
+                fill_color,
+                back_color,
+                filename
+            )
+
+            # Success message
+            st.success(
+                f"QR generated successfully: {filename}"
+            )
+
+            # Preview image
+            st.image(
+                filename,
+                caption="Generated QR Code"
+            )
+
+            # Download button
+            with open(filename, "rb") as file:
+
+                st.download_button(
+                    label="Download QR",
+                    data=file,
+                    file_name=filename,
+                    mime="image/png"
+                )
+
+        except Exception as e:
+
+            st.error(f"Error: {e}")
+
+st.header("QR History")
+
+history = get_history()
+
+if history:
+
+    for row in history:
+
+        st.write(f"ID: {row[0]}")
+
+        st.write(f"Data: {row[1]}")
+
+        st.write(f"QR Color: {row[2]}")
+
+        st.write(f"Background Color: {row[3]}")
+
+        st.write(f"Filename: {row[4]}")
+
+        st.write(f"Created At: {row[5]}")
+
+        st.divider()
+
+else:
+
+    st.info("No QR history available.")
