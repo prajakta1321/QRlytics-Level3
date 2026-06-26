@@ -28,3 +28,6 @@ data = st.text_input("Enter text or URL")
 fill_color = st.color_picker("Choose QR color", "#000000")
 
 back_color = st.color_picker("Choose background color", "#FFFFFF")
+
+# Generate button
+if st.button("Generate QR"):
