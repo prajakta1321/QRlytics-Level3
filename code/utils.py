@@ -11,3 +11,4 @@ def is_valid_url(url):
         r'([a-zA-Z]{2,6})'
         r'(\/\S*)?$'
     )
+
