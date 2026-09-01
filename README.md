@@ -33,4 +33,4 @@ SmartQR Level 3 is a web-based QR Code Management System developed using Python,
 - qrcode
 
 
-## 📸 Application Workflow
+## Application Workflow
