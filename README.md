@@ -38,4 +38,4 @@ SmartQR Level 3 is a web-based QR Code Management System developed using Python,
 2. Select QR code color
 3. Select background color
 4. Click **Generate QR**
-5. 5. Preview the generated QR code.
+Preview the generated QR code.
